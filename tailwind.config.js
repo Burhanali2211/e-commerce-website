@@ -20,8 +20,14 @@ module.exports = {
           800: '#075985',
           900: '#0c4a6e',
         },
-        background: 'rgb(var(--background) / <alpha-value>)',
-        foreground: 'rgb(var(--foreground) / <alpha-value>)',
+        bg: {
+          light: '#ffffff',
+          dark: '#0a0a0a',
+        },
+        text: {
+          light: '#000000',
+          dark: '#ededed',
+        }
       },
     },
   },
