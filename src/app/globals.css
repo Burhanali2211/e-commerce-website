@@ -3,28 +3,26 @@
 @tailwind utilities;
 
 @layer base {
-  body {
-    @apply bg-bg-light text-text-light dark:bg-bg-dark dark:text-text-dark;
-  }
-}
-
-:root {
-  --background: 255 255 255;
-  --foreground: 0 0 0;
-  --background-dark: 10 10 10;
-  --foreground-dark: 237 237 237;
-}
-
-@media (prefers-color-scheme: dark) {
   :root {
-    --background: var(--background-dark);
-    --foreground: var(--foreground-dark);
+    --bg-light: 255 255 255;
+    --bg-dark: 10 10 10;
+    --text-light: 0 0 0;
+    --text-dark: 237 237 237;
   }
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@layer utilities {
+  .theme-light {
+    --bg: var(--bg-light);
+    --text: var(--text-light);
+  }
+  
+  .theme-dark {
+    --bg: var(--bg-dark);
+    --text: var(--text-dark);
+  }
+}
+
+body {
+  @apply bg-bg-light text-text-light dark:bg-bg-dark dark:text-text-dark;
 }
