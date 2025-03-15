@@ -2,12 +2,18 @@ import { products } from '@/lib/data'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
 import { StarIcon } from '@heroicons/react/20/solid'
+import { useCart } from '@/contexts/CartContext'
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === params.id)
+  const { addItem } = useCart()
 
   if (!product) {
     notFound()
+  }
+
+  const handleAddToCart = () => {
+    addItem(product)
   }
 
   return (
@@ -96,7 +102,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             {/* Add to cart */}
             <div className="mt-10">
               <button
-                type="submit"
+                onClick={handleAddToCart}
+                type="button"
                 className="flex w-full items-center justify-center rounded-md border border-transparent bg-primary-600 px-8 py-3 text-base font-medium text-white hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
               >
                 Add to cart
