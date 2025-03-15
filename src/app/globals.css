@@ -1,8 +1,18 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@layer base {
+  :root {
+    --background: 255 255 255;
+    --foreground: 0 0 0;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 @theme inline {
@@ -14,8 +24,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 10 10 10;
+    --foreground: 237 237 237;
   }
 }
 
