@@ -1,7 +1,9 @@
-TETT
+THE
 ## Getting Started
 
 First, run the development server:
+
+```badevelopment server:
 
 ```bash
 npm run dev
