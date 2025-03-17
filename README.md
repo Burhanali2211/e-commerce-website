@@ -10,8 +10,6 @@ First, run the development server:
 
 ```ba
 
-First, run the development server:
-
 ```ba
 ## Getting Started
 
