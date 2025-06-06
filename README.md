@@ -19,7 +19,7 @@ First, run the development server:
 
 First, run the development server:
 
-```ba
+```bash
 ```ba
 
 ```ba
