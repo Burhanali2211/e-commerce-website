@@ -3,7 +3,7 @@
 
 First, run the development server:
 
-```ba
+```bash
 ## Getting Started
 
 First, run the development server:
